@@ -1,0 +1,1082 @@
+/* ==========================================
+   JOYERIA GILBERT - STYLES
+   Diseño elegante y moderno para joyería de lujo
+   ========================================== */
+
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #2c2c2c;
+    overflow-x: hidden;
+}
+
+/* Tipografías elegantes */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ==========================================
+   HEADER & NAVIGATION
+   ========================================== */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    animation: slideDown 0.6s ease;
+}
+
+/* Animación de entrada del header */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #4caf50;
+    letter-spacing: 2px;
+}
+
+.logo-accent {
+    color: #d4af37;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #2c2c2c;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    position: relative;
+    text-transform: uppercase;
+}
+
+/* Efecto underline en hover */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #d4af37;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: #0a0a0a;
+}
+
+/* Fondo del hero con múltiples capas */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Gradiente principal espectacular */
+.hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        /* Gradientes radiales principales */
+        radial-gradient(circle at 20% 30%, rgba(76, 175, 80, 0.9) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.8) 0%, transparent 45%),
+        radial-gradient(circle at 60% 70%, rgba(220, 53, 69, 0.7) 0%, transparent 35%),
+        radial-gradient(circle at 10% 80%, rgba(255, 152, 0, 0.6) 0%, transparent 30%),
+        radial-gradient(circle at 90% 90%, rgba(76, 175, 80, 0.5) 0%, transparent 25%),
+        radial-gradient(circle at 40% 50%, rgba(33, 150, 243, 0.7) 0%, transparent 30%),
+        /* Gradiente lineal base */
+        linear-gradient(135deg, 
+            rgba(10, 10, 10, 0.95) 0%,
+            rgba(26, 71, 42, 0.9) 15%,
+            rgba(33, 150, 243, 0.85) 30%,
+            rgba(76, 175, 80, 0.85) 45%,
+            rgba(255, 193, 7, 0.8) 65%,
+            rgba(220, 53, 69, 0.85) 85%,
+            rgba(10, 10, 10, 0.95) 100%
+        );
+    animation: gradientSpectacular 20s ease-in-out infinite;
+}
+
+@keyframes gradientSpectacular {
+    0%, 100% { 
+        background-position: 0% 50%;
+        opacity: 1;
+    }
+    25% { 
+        background-position: 50% 30%;
+        opacity: 0.9;
+    }
+    50% { 
+        background-position: 100% 50%;
+        opacity: 0.95;
+    }
+    75% { 
+        background-position: 50% 70%;
+        opacity: 0.85;
+    }
+}
+
+/* Efecto de partículas brillantes */
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(2px 2px at 60% 70%, rgba(212, 175, 55, 0.6), transparent),
+        radial-gradient(1px 1px at 50% 50%, rgba(255, 255, 255, 0.9), transparent),
+        radial-gradient(1px 1px at 80% 20%, rgba(212, 175, 55, 0.7), transparent),
+        radial-gradient(2px 2px at 10% 80%, rgba(255, 255, 255, 0.6), transparent);
+    background-size: 200% 200%;
+    animation: sparkle 20s linear infinite;
+}
+
+@keyframes sparkle {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 200%; }
+}
+
+/* Efecto de brillo sutil */
+.hero-shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.05) 50%,
+        transparent 70%
+    );
+    animation: shine 8s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% { transform: rotate(0deg) translateX(-100%); }
+    100% { transform: rotate(360deg) translateX(100%); }
+}
+
+/* Patrón decorativo mejorado */
+.hero-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    background-image: 
+        repeating-linear-gradient(45deg, #d4af37 0px, #d4af37 1px, transparent 1px, transparent 15px),
+        repeating-linear-gradient(-45deg, #4caf50 0px, #4caf50 1px, transparent 1px, transparent 15px);
+    z-index: 2;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 10;
+    padding: 2rem;
+    animation: fadeInUp 1.2s ease;
+    position: relative;
+}
+
+/* Badge exclusivo */
+.hero-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #d4af37, #f4e4bc);
+    color: #4caf50;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    animation: badgeGlow 2s ease-in-out infinite;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+@keyframes badgeGlow {
+    0%, 100% { 
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 6px 30px rgba(212, 175, 55, 0.5);
+        transform: scale(1.05);
+    }
+}
+
+/* Animación fade in desde abajo mejorada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título principal mejorado */
+.hero h1 {
+    font-size: 6.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-weight: 900;
+    letter-spacing: 4px;
+    line-height: 1.1;
+    text-shadow: 
+        0 0 20px rgba(212, 175, 55, 0.5),
+        0 4px 10px rgba(0, 0, 0, 0.8);
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    0% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 4px 10px rgba(0, 0, 0, 0.8); }
+    100% { text-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 4px 15px rgba(0, 0, 0, 0.9); }
+}
+
+/* Subtítulo del hero mejorado */
+.hero-subtitle {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    animation: fadeInUp 1.2s ease 0.3s backwards;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Descripción adicional */
+.hero-description {
+    margin-bottom: 3rem;
+    animation: fadeInUp 1.2s ease 0.6s backwards;
+}
+
+.hero-description p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contenedor de botones */
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1.2s ease 0.9s backwards;
+}
+
+/* Botones CTA mejorados */
+.cta-button {
+    display: inline-block;
+    padding: 1.4rem 3rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+/* Botón primario */
+.cta-button.primary {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: #fff;
+    border-color: #d4af37;
+    box-shadow: 0 8px 30px rgba(76, 175, 80, 0.4);
+}
+
+.cta-button.primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #d4af37, #f4e4bc);
+    transition: left 0.4s;
+    z-index: -1;
+}
+
+.cta-button.primary:hover::before {
+    left: 0;
+}
+
+.cta-button.primary:hover {
+    color: #4caf50;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(212, 175, 55, 0.4);
+}
+
+/* Botón secundario */
+.cta-button.secondary {
+    background: transparent;
+    color: #d4af37;
+    border-color: #d4af37;
+}
+
+.cta-button.secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #d4af37;
+    transition: width 0.4s;
+    z-index: -1;
+}
+
+.cta-button.secondary:hover::before {
+    width: 100%;
+}
+
+.cta-button.secondary:hover {
+    color: #4caf50;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(212, 175, 55, 0.3);
+}
+
+/* Indicador de scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeInUp 1.2s ease 1.2s backwards;
+    z-index: 10;
+}
+
+.scroll-arrow {
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, #d4af37);
+    position: relative;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.scroll-arrow::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #d4af37;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* ==========================================
+   GALLERY SECTION
+   ========================================== */
+.gallery-section {
+    padding: 8rem 2rem;
+    background: #fafafa;
+}
+
+/* Títulos de sección */
+.section-title {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #4caf50;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 4rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Grid de galería */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Items individuales de galería */
+.gallery-item {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Imágenes de galería */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+/* Efecto zoom en hover */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay con información */
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(76, 175, 80, 0.95), transparent);
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.4s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h3 {
+    color: #4caf50;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-overlay p {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+/* ==========================================
+   PRODUCTS SECTION
+   ========================================== */
+.products {
+    padding: 8rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+/* Tarjetas de producto */
+.product-card {
+    background: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.4s;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    position: relative;
+}
+
+/* Línea superior decorativa */
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #d4af37;
+    transition: width 0.4s;
+}
+
+.product-card:hover::before {
+    width: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Iconos de productos */
+.product-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animación flotante */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.product-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #4caf50;
+    font-weight: 700;
+}
+
+.product-card p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+/* ==========================================
+   WHY CHOOSE US SECTION
+   ========================================== */
+.why-choose {
+    padding: 8rem 2rem;
+    background: 
+        linear-gradient(135deg, #4caf50 0%, #45a049 25%, #388e3c 50%, #2e7d32 75%, #1b5e20 100%),
+        radial-gradient(circle at 20% 80%, rgba(76, 175, 80, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    background-size: 100% 100%, 200% 200%, 300% 300%;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de brillo sutil en el fondo */
+.why-choose::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.08) 50%,
+        transparent 60%
+    );
+    animation: sectionShine 15s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes sectionShine {
+    0%, 100% { transform: translateX(-100%) rotate(45deg); }
+    50% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Patrón decorativo sutil */
+.why-choose::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.05) 0%, transparent 2%),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 2%);
+    background-size: 50px 50px, 60px 60px;
+    z-index: 1;
+}
+
+.why-choose .section-title {
+    color: #d4af37;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.why-choose .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Tarjetas de características mejoradas */
+.feature-card {
+    text-align: center;
+    padding: 2.5rem;
+    background: 
+        linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeIn 1s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de brillo en hover */
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 70%
+    );
+    transform: rotate(45deg);
+    transition: all 0.6s;
+    opacity: 0;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+    transform: rotate(45deg) translate(50%, 50%);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.feature-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    background: 
+        linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border-color: rgba(212, 175, 55, 0.6);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.2),
+        0 0 30px rgba(212, 175, 55, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    background: linear-gradient(135deg, #d4af37, #f4e4bc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1) rotateY(360deg);
+    text-shadow: 0 4px 20px rgba(212, 175, 55, 0.5);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #d4af37;
+    font-weight: 600;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.feature-card p {
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.8;
+    font-weight: 300;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   SERVICES SECTION
+   ========================================== */
+.services {
+    padding: 8rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #fafafa;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Items de servicio */
+.service-item {
+    background: #fff;
+    padding: 2.5rem;
+    border-left: 4px solid #d4af37;
+    transition: all 0.3s;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-item:hover {
+    transform: translateX(10px);
+    border-left-color: #4caf50;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #4caf50;
+    font-weight: 600;
+}
+
+.service-item p {
+    color: #666;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* ==========================================
+   TESTIMONIALS SECTION
+   ========================================== */
+.testimonials {
+    padding: 8rem 2rem;
+    background: #fff;
+}
+
+.testimonial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+/* Tarjetas de testimonios */
+.testimonial {
+    background: #fafafa;
+    padding: 3rem;
+    border-left: 4px solid #d4af37;
+    transition: all 0.3s;
+    position: relative;
+}
+
+/* Comillas decorativas */
+.testimonial::before {
+    content: '"';
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 6rem;
+    color: rgba(212, 175, 55, 0.2);
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+}
+
+.testimonial:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Estrellas de calificación */
+.stars {
+    color: #d4af37;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial h4 {
+    color: #4caf50;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   CONTACT CTA SECTION
+   ========================================== */
+.contact-cta {
+    padding: 8rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-top: 1px solid #e8e8e8;
+}
+
+.contact-cta h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #4caf50;
+}
+
+.contact-cta p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+/* ==========================================
+   WHATSAPP FLOATING BUTTON
+   ========================================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1000;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 35px rgba(37, 211, 102, 0.5);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    background: #4caf50;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+/* Enlaces de redes sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: #d4af37;
+    font-size: 2rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+    /* Hero responsive */
+    .hero h1 {
+        font-size: 3.5rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-description p {
+        font-size: 1rem;
+    }
+
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-button {
+        padding: 1.2rem 2.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .scroll-indicator {
+        bottom: 2rem;
+        font-size: 0.7rem;
+    }
+
+    .scroll-arrow {
+        height: 25px;
+    }
+
+    /* Títulos responsive */
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    /* Navegación oculta en móvil */
+    .nav-links {
+        display: none;
+    }
+
+    /* Galería una columna */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* WhatsApp button más pequeño */
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-description p {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 0.85rem;
+    }
+}
