@@ -406,6 +406,36 @@ nav {
     box-shadow: 0 12px 40px rgba(212, 175, 55, 0.4);
 }
 
+/* Botón WhatsApp */
+.cta-button.whatsapp-cta {
+    background: linear-gradient(135deg, #25D366, #20BA58);
+    color: #fff;
+    border-color: #25D366;
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+}
+
+.cta-button.whatsapp-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #20BA58, #1da851);
+    transition: left 0.4s;
+    z-index: -1;
+}
+
+.cta-button.whatsapp-cta:hover::before {
+    left: 0;
+}
+
+.cta-button.whatsapp-cta:hover {
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
+}
+
 /* Botón secundario */
 .cta-button.secondary {
     background: transparent;
@@ -1047,6 +1077,48 @@ footer p {
     margin-top: 2rem;
 }
 
+/* Botón Facebook */
+.social-links a.facebook-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #1877F2, #1563D1);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(24, 119, 242, 0.3);
+}
+
+.social-links a.facebook-btn:hover {
+    background: linear-gradient(135deg, #1563D1, #0D47A1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(24, 119, 242, 0.5);
+}
+
+/* Botón Instagram */
+.social-links a.instagram-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #E4405F, #C13584);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(228, 64, 95, 0.3);
+}
+
+.social-links a.instagram-btn:hover {
+    background: linear-gradient(135deg, #C13584, #A02860);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(228, 64, 95, 0.5);
+}
+
 .social-links a {
     color: #d4af37;
     font-size: 2rem;
@@ -1056,7 +1128,6 @@ footer p {
 .social-links a:hover {
     color: #fff;
     transform: translateY(-5px);
-}
 
 /* ==========================================
    RESPONSIVE DESIGN
