@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Joyería Gilbert - Lujo, elegancia y distinción en cada pieza. Relojes, cadenas, anillos y más.">
-    <title>Joyeria Gilbert - Lujo y Elegancia</title>
+    <title>Joyería Gilbert | Joyas que cuentan tu historia</title>
 
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Fancybox CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
+    <link rel="stylesheet" href="vendor/fancybox/fancybox.css">
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
     
@@ -27,18 +27,18 @@
 </head>
 
 <body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
     <!-- ========================================
          HEADER / NAVIGATION
     ========================================= -->
     <header>
         <nav>
-            <div class="logo"><span style="color: #0066ff !important;">JOYERIA</span> <span
-                    style="color: #ff0000 !important;">GILBERT</span> <span class="logo-accent"></span></div>
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <a class="brand" href="#inicio" aria-label="Joyería Gilbert, inicio"><img src="img/logo.jpeg" alt="Logo original de Joyería Gilbert" width="48" height="48"><span><span class="brand-blue">Joyería</span> <span class="brand-red">Gilbert</span><small>San Francisco de Macorís</small></span></a>
+            <button class="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
                 <i class="bi bi-list"></i>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="menu-principal">
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#servicios">Servicios</a></li>
@@ -51,28 +51,19 @@
     <!-- ========================================
          HERO SECTION
     ========================================= -->
-    <section class="hero">
-        <div class="hero-background">
-            <div class="hero-gradient"></div>
-            <div class="hero-particles"></div>
-            <div class="hero-shine"></div>
+    <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-copy">
+            <p class="hero-location">Joyería Gilbert · San Francisco de Macorís</p>
+            <h1 id="hero-title">Hay joyas.<br>Y hay historias.</h1>
+            <p class="hero-description">Cada pieza cuenta una historia de excelencia y sofisticación</p>
+            <a href="#galeria" class="cta-button primary">Descubre nuestras joyas <span aria-hidden="true">→</span></a>
+            <p class="hero-signature">Lujo · Elegancia · Distinción</p>
         </div>
-        <div class="hero-pattern"></div>
-        <div class="hero-content">
-            <div class="hero-badge">EXCLUSIVO</div>
-            <h1><span style="color: #0066ff !important;">JOYERIA</span> <span
-                    style="color: #ff0000 !important;">GILBERT</span></h1>
-            <p class="hero-subtitle">LUJO · ELEGANCIA · DISTINCIÓN</p>
-            <div class="hero-description">
-                <p>Cada pieza cuenta una historia de excelencia y sofisticación</p>
-            </div>
-            <div class="hero-buttons">
-                <a href="#galeria" class="cta-button primary">Descubre Nuestras Joyas</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-            <span>DESCUBRE MÁS</span>
+        <div class="hero-art">
+            <figure class="hero-photo"><button class="polaroid-select" type="button" aria-label="Traer foto de anillo al frente" aria-pressed="false"></button><img src="img/9.jpeg" alt="Anillo de oro con piedras brillantes de la colección Gilbert" fetchpriority="high"><figcaption>Los detalles que lo dicen todo.</figcaption></figure>
+            <figure class="hero-inset"><button class="polaroid-select" type="button" aria-label="Traer foto de pulseras al frente" aria-pressed="false"></button><img src="img/13.jpeg" alt="Pulseras de la colección de Joyería Gilbert"><figcaption>Elegancia en cada detalle</figcaption></figure>
+            <figure class="hero-third"><button class="polaroid-select" type="button" aria-label="Traer foto de cadenas al frente" aria-pressed="false"></button><img src="img/15.jpeg" alt="Cadenas de oro con iniciales de Joyería Gilbert"><figcaption>Una joya, tu historia</figcaption></figure>
         </div>
     </section>
 
@@ -83,119 +74,120 @@
         <h2 class="section-title">Nuestra Colección</h2>
         <p class="section-subtitle">Piezas únicas que cuentan tu historia</p>
 
-        <div class="gallery-grid">
+        <div class="gallery-grid" id="coleccion-completa">
             <!-- Gallery Item 1 -->
             <div class="gallery-item">
                 <a href="img/1.jpeg" data-fancybox="gallery">
-                    <img src="img/1.jpeg" alt="Joyería Gilbert - Pieza 1">
+                    <img src="img/1.jpeg" alt="Anillos en plata" loading="lazy" decoding="async"><span class="gallery-caption">Anillos en plata<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 2 -->
             <div class="gallery-item">
                 <a href="img/2.jpeg" data-fancybox="gallery">
-                    <img src="img/2.jpeg" alt="Joyería Gilbert - Pieza 2">
+                    <img src="img/2.jpeg" alt="Dijes y detalles" loading="lazy" decoding="async"><span class="gallery-caption">Dijes y detalles<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 3 -->
             <div class="gallery-item">
                 <a href="img/3.jpeg" data-fancybox="gallery">
-                    <img src="img/3.jpeg" alt="Joyería Gilbert - Pieza 3">
+                    <img src="img/3.jpeg" alt="Pulseras de oro" loading="lazy" decoding="async"><span class="gallery-caption">Pulseras de oro<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 4 -->
             <div class="gallery-item">
                 <a href="img/4.jpeg" data-fancybox="gallery">
-                    <img src="img/4.jpeg" alt="Joyería Gilbert - Pieza 4">
+                    <img src="img/4.jpeg" alt="Cadenas en plata" loading="lazy" decoding="async"><span class="gallery-caption">Cadenas en plata<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 5 -->
             <div class="gallery-item">
                 <a href="img/5.jpeg" data-fancybox="gallery">
-                    <img src="img/5.jpeg" alt="Joyería Gilbert - Pieza 5">
+                    <img src="img/5.jpeg" alt="Dijes para tu historia" loading="lazy" decoding="async"><span class="gallery-caption">Dijes para tu historia<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 6 -->
             <div class="gallery-item">
                 <a href="img/6.jpeg" data-fancybox="gallery">
-                    <img src="img/6.jpeg" alt="Joyería Gilbert - Pieza 6">
+                    <img src="img/6.jpeg" alt="Pulseras y esclavas" loading="lazy" decoding="async"><span class="gallery-caption">Pulseras y esclavas<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 7 -->
             <div class="gallery-item">
                 <a href="img/7.jpeg" data-fancybox="gallery">
-                    <img src="img/7.jpeg" alt="Joyería Gilbert - Pieza 7">
+                    <img src="img/7.jpeg" alt="Cadenas de oro" loading="lazy" decoding="async"><span class="gallery-caption">Cadenas de oro<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 8 -->
             <div class="gallery-item">
                 <a href="img/8.jpeg" data-fancybox="gallery">
-                    <img src="img/8.jpeg" alt="Joyería Gilbert - Pieza 8">
+                    <img src="img/8.jpeg" alt="Anillos para celebrar" loading="lazy" decoding="async"><span class="gallery-caption">Anillos para celebrar<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 9 -->
             <div class="gallery-item">
                 <a href="img/9.jpeg" data-fancybox="gallery">
-                    <img src="img/9.jpeg" alt="Joyería Gilbert - Pieza 9">
+                    <img src="img/9.jpeg" alt="Brillo que enamora" loading="lazy" decoding="async"><span class="gallery-caption">Brillo que enamora<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 10 -->
             <div class="gallery-item">
                 <a href="img/10.jpeg" data-fancybox="gallery">
-                    <img src="img/10.jpeg" alt="Joyería Gilbert - Pieza 10">
+                    <img src="img/10.jpeg" alt="Anillos con carácter" loading="lazy" decoding="async"><span class="gallery-caption">Anillos con carácter<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 11 -->
             <div class="gallery-item">
                 <a href="img/11.jpeg" data-fancybox="gallery">
-                    <img src="img/11.jpeg" alt="Joyería Gilbert - Pieza 11">
+                    <img src="img/11.jpeg" alt="Detalles en oro" loading="lazy" decoding="async"><span class="gallery-caption">Detalles en oro<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 12 -->
             <div class="gallery-item">
                 <a href="img/12.jpeg" data-fancybox="gallery">
-                    <img src="img/12.jpeg" alt="Joyería Gilbert - Pieza 12">
+                    <img src="img/12.jpeg" alt="Pulseras con dijes" loading="lazy" decoding="async"><span class="gallery-caption">Pulseras con dijes<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 13 -->
             <div class="gallery-item">
                 <a href="img/13.jpeg" data-fancybox="gallery">
-                    <img src="img/13.jpeg" alt="Joyería Gilbert - Pieza 13">
+                    <img src="img/13.jpeg" alt="Una colección de detalles" loading="lazy" decoding="async"><span class="gallery-caption">Una colección de detalles<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 14 -->
             <div class="gallery-item">
                 <a href="img/14.jpeg" data-fancybox="gallery">
-                    <img src="img/14.jpeg" alt="Joyería Gilbert - Pieza 14">
+                    <img src="img/14.jpeg" alt="Pulseras para combinar" loading="lazy" decoding="async"><span class="gallery-caption">Pulseras para combinar<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 15 -->
             <div class="gallery-item">
                 <a href="img/15.jpeg" data-fancybox="gallery">
-                    <img src="img/15.jpeg" alt="Joyería Gilbert - Pieza 15">
+                    <img src="img/15.jpeg" alt="Iniciales que importan" loading="lazy" decoding="async"><span class="gallery-caption">Iniciales que importan<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
 
             <!-- Gallery Item 16 -->
             <div class="gallery-item">
                 <a href="img/16.jpeg" data-fancybox="gallery">
-                    <img src="img/16.jpeg" alt="Joyería Gilbert - Pieza 16">
+                    <img src="img/16.jpeg" alt="Dijes de ángeles" loading="lazy" decoding="async"><span class="gallery-caption">Dijes de ángeles<span aria-hidden="true">↗</span></span>
                 </a>
             </div>
         </div>
+        <button class="collection-toggle" aria-expanded="false" aria-controls="coleccion-completa" hidden>Ver toda la colección <span aria-hidden="true">+</span></button>
     </section>
 
     <!-- ========================================
@@ -208,46 +200,40 @@
         <div class="product-grid">
             <!-- Product Card 1 -->
             <div class="product-card">
-                <div class="product-icon">⌚</div>
-                <h3>Relojes de Lujo</h3>
+                <h3><svg class="product-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="6" width="11" height="12" rx="3"/><path d="m9 6 .7-4h4.6l.7 4m-6 12 .7 4h4.6l.7-4M12 9v3l2 1"/></svg><span>Relojes de Lujo</span></h3>
                 <p>Colección exclusiva de relojes de las marcas más prestigiosas. Cada pieza cuenta una historia de
                     elegancia y precisión.</p>
             </div>
 
             <!-- Product Card 2 -->
             <div class="product-card">
-                <div class="product-icon">📿</div>
-                <h3>Cadenas de Oro</h3>
+                <h3><svg class="product-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 14.5 5-5m-6.8 3.8-1.4 1.4a3.5 3.5 0 0 0 5 5l3-3a3.5 3.5 0 0 0 0-5m2-1 1.4-1.4a3.5 3.5 0 0 0-5-5l-3 3a3.5 3.5 0 0 0 0 5"/></svg><span>Cadenas de Oro</span></h3>
                 <p>Cadenas elaboradas en oro de 14k y 18k. Diseños únicos que reflejan tu personalidad y estilo
                     inigualable.</p>
             </div>
 
             <!-- Product Card 3 -->
             <div class="product-card">
-                <div class="product-icon">💍</div>
-                <h3>Anillos Exclusivos</h3>
+                <h3><svg class="product-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15" r="6.5"/><path d="m8 5 2-3h4l2 3-4 4-4-4Zm0 0h8"/></svg><span>Anillos Exclusivos</span></h3>
                 <p>Anillos diseñados para momentos especiales. Desde compromisos hasta celebraciones, tenemos la pieza
                     perfecta.</p>
             </div>
 
             <!-- Product Card 4 -->
             <div class="product-card">
-                <div class="product-icon">💎</div>
-                <h3>Diamantes</h3>
+                <h3><svg class="product-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 4-5h10l4 5-9 13L3 8Zm0 0h18M7 3l2 5 3 13 3-13 2-5M9 8l3-5 3 5"/></svg><span>Diamantes</span></h3>
                 <p>Diamantes certificados de la más alta calidad. Brillantez y pureza que duran para siempre.</p>
             </div>
 
             <!-- Product Card 5 -->
             <div class="product-card">
-                <div class="product-icon">👑</div>
-                <h3>Joyas Personalizadas</h3>
+                <h3><svg class="product-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 17-1 4 4-1L19 8l-3-3L4 17Zm10-10 3 3M7 3v4M5 5h4m10 10v6m-3-3h6"/></svg><span>Joyas Personalizadas</span></h3>
                 <p>Creamos la joya de tus sueños. Diseño personalizado que refleja tu visión única.</p>
             </div>
 
             <!-- Product Card 6 -->
             <div class="product-card">
-                <div class="product-icon">✨</div>
-                <h3>Accesorios Premium</h3>
+                <h3><svg class="product-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4v4a7 7 0 0 0 14 0V4M5 7h14M12 15v2m-3 3 3-3 3 3-3 3-3-3Z"/></svg><span>Accesorios Premium</span></h3>
                 <p>Complementa tu look con nuestros accesorios exclusivos. Elegancia en cada detalle.</p>
             </div>
         </div>
@@ -263,43 +249,37 @@
         <div class="features-grid">
             <!-- Feature 1 -->
             <div class="feature-card">
-                <div class="feature-icon">✓</div>
-                <h3>Calidad Garantizada</h3>
+                <h3><svg class="feature-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg><span>Calidad Garantizada</span></h3>
                 <p>Todas nuestras joyas cuentan con certificados de autenticidad y garantía de por vida.</p>
             </div>
 
             <!-- Feature 2 -->
             <div class="feature-card">
-                <div class="feature-icon">⭐</div>
-                <h3>Años de Experiencia</h3>
+                <h3><svg class="feature-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8 14-2 7 6-3 6 3-2-7m-4-8v3l2 1"/></svg><span>Años de Experiencia</span></h3>
                 <p>Más de 20 años creando momentos inolvidables con nuestras joyas excepcionales.</p>
             </div>
 
             <!-- Feature 3 -->
             <div class="feature-card">
-                <div class="feature-icon">🎨</div>
-                <h3>Diseños Únicos</h3>
+                <h3><svg class="feature-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 17-1 4 4-1L19 8l-3-3L4 17Zm10-10 3 3M7 3v4M5 5h4m10 10v6m-3-3h6"/></svg><span>Diseños Únicos</span></h3>
                 <p>Colecciones exclusivas que no encontrarás en ningún otro lugar.</p>
             </div>
 
             <!-- Feature 4 -->
             <div class="feature-card">
-                <div class="feature-icon">💰</div>
-                <h3>Mejores Precios</h3>
+                <h3><svg class="feature-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h8l10 10-8 8L3 11V3Z"/><circle cx="7.5" cy="7.5" r="1"/></svg><span>Mejores Precios</span></h3>
                 <p>Calidad premium a precios justos. Tu inversión vale cada centavo.</p>
             </div>
 
             <!-- Feature 5 -->
             <div class="feature-card">
-                <div class="feature-icon">🔒</div>
-                <h3>Compra Segura</h3>
+                <h3><svg class="feature-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></svg><span>Compra Segura</span></h3>
                 <p>Transacciones 100% seguras y discretas. Tu confianza es nuestra prioridad.</p>
             </div>
 
             <!-- Feature 6 -->
             <div class="feature-card">
-                <div class="feature-icon">🚀</div>
-                <h3>Entrega Rápida</h3>
+                <h3><svg class="feature-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h12v13H3V5Zm12 5h4l3 4v4h-7M3 9H1m2 4H1"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg><span>Entrega Rápida</span></h3>
                 <p>Envíos express a todo el país. Tu joya en tiempo récord.</p>
             </div>
         </div>
@@ -308,60 +288,62 @@
     <!-- ========================================
          SERVICES SECTION
     ========================================= -->
-    <section class="services" id="servicios">
+    <section class="services" id="servicios"><div class="service-intro"><img src="img/15.jpeg" alt="Cadenas con iniciales de Joyería Gilbert" loading="lazy"><p>Tu joya, siempre contigo.</p></div><div class="service-content">
         <h2 class="section-title">Nuestros Servicios</h2>
         <p class="section-subtitle">Atención profesional en cada detalle</p>
 
         <div class="service-list">
             <!-- Service 1 -->
             <div class="service-item">
-                <h3>🔧 Reparación de Joyas</h3>
+                <h3><svg class="service-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6a5 5 0 0 0-6 6L3 17a2.8 2.8 0 0 0 4 4l5-5a5 5 0 0 0 6-6l-3 3-4-4 3-3Z"/></svg><span>Reparación de Joyas</span></h3>
                 <p>Devolvemos la vida a tus joyas favoritas con reparaciones expertas y cuidadosas.</p>
             </div>
 
             <!-- Service 2 -->
             <div class="service-item">
-                <h3>✨ Limpieza Profesional</h3>
+                <h3><svg class="service-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3ZM20 2v4m-2-2h4"/></svg><span>Limpieza Profesional</span></h3>
                 <p>Servicio de limpieza y pulido para que tus joyas brillen como el primer día.</p>
             </div>
 
             <!-- Service 3 -->
             <div class="service-item">
-                <h3>📏 Ajuste de Tamaño</h3>
+                <h3><svg class="service-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 16 13-13 5 5L8 21l-5-5Zm10-10 2 2m-5 1 2 2m-5 1 2 2m-5 1 2 2"/></svg><span>Ajuste de Tamaño</span></h3>
                 <p>Ajustamos anillos y pulseras para que te queden perfectamente.</p>
             </div>
 
             <!-- Service 4 -->
             <div class="service-item">
-                <h3>💎 Tasación Profesional</h3>
+                <h3><svg class="service-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6M7 9l1.5-2h3L13 9l-3 4-3-4Zm0 0h6"/></svg><span>Tasación Profesional</span></h3>
                 <p>Evaluamos el valor real de tus joyas con certificación profesional.</p>
             </div>
 
             <!-- Service 5 -->
             <div class="service-item">
-                <h3>🎁 Grabado Personalizado</h3>
+                <h3><svg class="service-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 16-1 5 5-1L20 8l-4-4L4 16Zm10-10 4 4M4 16l4 4m4 1h9"/></svg><span>Grabado Personalizado</span></h3>
                 <p>Añade un toque personal con nuestro servicio de grabado láser de precisión.</p>
             </div>
 
             <!-- Service 6 -->
             <div class="service-item">
-                <h3>🔄 Compra y Venta</h3>
+                <h3><svg class="service-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h17m-4-4 4 4-4 4M21 17H4m4-4-4 4 4 4"/></svg><span>Compra y Venta</span></h3>
                 <p>Compramos oro y joyas usadas al mejor precio del mercado.</p>
             </div>
         </div>
-    </section>
+    </div></section>
 
     <!-- ========================================
          TESTIMONIALS SECTION
     ========================================= -->
     <section class="testimonials" id="testimonios">
         <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
-        <p class="section-subtitle">Testimonios reales de clientes satisfechos</p>
+        <p class="section-subtitle">Historias y experiencias alrededor de nuestras joyas</p>
 
-        <div class="testimonial-container">
+        <div class="testimonial-carousel" role="region" aria-roledescription="carrusel" aria-label="Testimonios de clientes">
+        <button class="testimonial-arrow testimonial-prev" type="button" aria-label="Testimonios anteriores" aria-controls="testimonial-track" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+        <div class="testimonial-container" id="testimonial-track">
             <!-- Testimonial 1 -->
             <div class="testimonial">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
                 <p>Compré mi anillo de compromiso en Joyería Gilbert y quedé maravillado con la calidad y atención. ¡Mi
                     prometida quedó encantada!</p>
                 <h4>— Carlos M.</h4>
@@ -369,7 +351,7 @@
 
             <!-- Testimonial 2 -->
             <div class="testimonial">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
                 <p>La mejor joyería de la ciudad. Profesionalismo y calidad en cada pieza. Mi cadena de oro es
                     simplemente perfecta.</p>
                 <h4>— María R.</h4>
@@ -377,12 +359,21 @@
 
             <!-- Testimonial 3 -->
             <div class="testimonial">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
                 <p>Excelente servicio personalizado. Me ayudaron a diseñar una joya única para mi madre. Quedó
                     impresionada.</p>
                 <h4>— Luis F.</h4>
             </div>
+            <div class="testimonial testimonial-example"><span class="example-label">Testimonio de ejemplo</span><p>Buscaba un regalo especial y me orientaron con mucha paciencia. Encontré una pieza que se sentía hecha para esa persona.</p><h4>— Yudelka R.</h4></div>
+            <div class="testimonial testimonial-example"><span class="example-label">Testimonio de ejemplo</span><p>Llevé una joya que guardaba desde hace años. Fue muy bonito volver a usarla y recuperar todos esos recuerdos.</p><h4>— Ramón P.</h4></div>
+            <div class="testimonial testimonial-example"><span class="example-label">Testimonio de ejemplo</span><p>Me ayudaron a elegir una cadena que puedo llevar todos los días. Me encantó poder ver los detalles con tranquilidad.</p><h4>— Yocasta M.</h4></div>
+            <div class="testimonial testimonial-example"><span class="example-label">Testimonio de ejemplo</span><p>Quería darle un toque personal a mi regalo. El detalle del grabado lo convirtió en algo mucho más especial.</p><h4>— José Miguel T.</h4></div>
+            <div class="testimonial testimonial-example"><span class="example-label">Testimonio de ejemplo</span><p>Necesitaba ajustar un anillo y valoré mucho que me explicaran el proceso. La atención hizo la diferencia.</p><h4>— Altagracia C.</h4></div>
+            <div class="testimonial testimonial-example"><span class="example-label">Testimonio de ejemplo</span><p>Encontré unas pulseras preciosas para una ocasión familiar. Disfruté elegir cada una pensando en quien la recibiría.</p><h4>— Wellington D.</h4></div>
         </div>
+        <button class="testimonial-arrow testimonial-next" type="button" aria-label="Siguientes testimonios" aria-controls="testimonial-track" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+        </div>
+        <div class="testimonial-pagination" hidden><div class="testimonial-dots" aria-label="Páginas de testimonios"></div><p class="testimonial-status" aria-live="polite" aria-atomic="true"></p></div>
     </section>
 
     <!-- ========================================
@@ -391,13 +382,14 @@
     <section class="contact-cta" id="contacto">
         <h2>¿Listo Para Brillar?</h2>
         <p>Visítanos o contáctanos hoy mismo</p>
-        <a href="https://wa.me/18096733757" class="cta-button whatsapp-cta" target="_blank"><i class="bi bi-whatsapp"></i> Contactar por WhatsApp</a>
+        <a href="https://wa.me/18096733757" class="cta-button whatsapp-cta" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i> Contactar por WhatsApp</a>
     </section>
 
+    </main>
     <!-- ========================================
          WHATSAPP FLOATING BUTTON
     ========================================= -->
-    <a href="https://wa.me/18096733757" class="whatsapp-float" target="_blank">
+    <a aria-label="Consultar por WhatsApp" href="https://wa.me/18096733757" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30"
             height="30">
     </a>
@@ -405,29 +397,41 @@
     <!-- ========================================
          FOOTER
     ========================================= -->
-    <footer>
-        <p>📍 C/ El Carmen #45 Casi esquina Mella S.F.M, República Dominicana</p>
-        <p>📞 <a href="tel:+18096733757" style="color: inherit; text-decoration: none;">+1 (809) 673-3757</a></p>
-        <div class="social-links">
-            <a href="https://www.facebook.com/p/Joyeria-Gilbert-100041735054141/" target="_blank" title="Facebook" class="facebook-btn"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/joyeriagilbert/" target="_blank" title="Instagram" class="instagram-btn"><i class="bi bi-instagram"></i></a>
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-identity">
+                <a class="footer-brand" href="#inicio">Joyería Gilbert</a>
+                <p>Lujo, elegancia y distinción.<br>San Francisco de Macorís.</p>
+            </div>
+            <div class="footer-location">
+                <h2>Visítanos</h2>
+                <a class="footer-detail" href="https://www.google.com/maps?cid=2555741327453023298" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                    <span>C/ El Carmen #45, casi esquina Mella<br>San Francisco de Macorís, República Dominicana<small>Ver ubicación en Google Maps <span aria-hidden="true">↗</span></small></span>
+                </a>
+            </div>
+            <div class="footer-contact">
+                <h2>Conversemos</h2>
+                <a class="footer-detail footer-phone" href="tel:+18096733757">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="m7 3 3 5-2.5 2.5a15 15 0 0 0 6 6L16 14l5 3-1 4C10 22 2 14 3 4l4-1Z"/></svg>
+                    <span>+1 (809) 673-3757</span>
+                </a>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/p/Joyeria-Gilbert-100041735054141/" target="_blank" rel="noopener noreferrer" aria-label="Joyería Gilbert en Facebook" class="facebook-btn"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/joyeriagilbert/" target="_blank" rel="noopener noreferrer" aria-label="Joyería Gilbert en Instagram" class="instagram-btn"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
         </div>
-        <p style="margin-top: 2rem; color: rgba(255,255,255,0.6);">© 2026 Joyería Gilbert. Todos los derechos
-            reservados.</p>
-        <p style="margin-top: 0.5rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">Website developed by <a href="https://raldylopez20.github.io/Landing-page-personal-de-servicios/" target="_blank" style="color: #d4af37; text-decoration: none;">Raldy López</a></p>
+        <div class="footer-bottom">
+            <p>© 2026 Joyería Gilbert. Todos los derechos reservados.</p>
+            <p class="footer-credit">Developed by <a href="https://raldylopez20.github.io/Landing-page-personal-de-servicios/" target="_blank" rel="noopener noreferrer"><strong>Ing.Raldy López</strong></a></p>
+        </div>
     </footer>
 
     <!-- ========================================
          JAVASCRIPT
     ========================================= -->
-    <!-- Fancybox JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-        // Initialize Fancybox
-        Fancybox.bind("[data-fancybox='gallery']", {
-            // Options
-        });
-    </script>
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
     <script src="script.js"></script>
 
 </body>
